@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-07_19-39-13",
+            "content": "@@ -1,727 +0,0 @@\n-class Roupa:%0A    def __init__(self):%0A        self.__tamanho = %22%22%0A    %0A    def __str__(self):%0A         return f%22O tamanho da sua roupa %C3%A9: %7Bself.__tamanho%7D%22%0A    %0A    def set_tamanho(self, valor: int) -%3E None: %0A                if valor != %22PP%22 and valor != %22P%22 and valor != %22M%22 and valor != %22G%22 and valor != %22GG%22 and valor != %22XG%22:%0A                    print(%22Valor n%C3%A3o permitido! Apenas PP, P, M, G, GG e XG%22)%0A                self.__tamanho = valor%0A        %0A    def get_tamanho(self) -%3E int: %0A        return self.__tamanho%0A%0Adef main():%0A    while True:%0A        roupa = Roupa()%0A        print(%22Informe o tamanho da roupa%22)%0A        line = int(input())%0A        roupa.set_tamanho(line)%0A        %0A        print(roupa)%0A        break%0Amain()\n",
+            "lines": "0"
+        },
+        {
+            "label": "2025-10-07_19-48-24",
+            "content": "@@ -404,52 +404,8 @@\n G%22)%0A\n-                    return%0A                %0A\n     \n@@ -439,16 +439,25 @@\n = valor%0A\n+        %0A\n     def \n@@ -629,15 +629,20 @@\n e = \n+int(\n input()\n+)\n %0A   \n@@ -700,15 +700,28 @@\n (roupa)%0A\n+        break\n %0Amain()\n",
+            "lines": "25"
+        },
+        {
+            "label": "2025-10-07_19-56-31",
+            "content": "@@ -734,21 +734,8 @@\n pa)%0A\n-        break\n %0Amai\n",
+            "lines": "26"
+        },
+        {
+            "label": "2025-10-07_19-59-39",
+            "content": "class Roupa:\n    def __init__(self):\n        self.__tamanho = \"\"\n    \n    def __str__(self):\n         return f\"O tamanho da sua roupa \u00e9: {self.__tamanho}\"\n    \n    def set_tamanho(self, valor: int) -> None: \n                if valor != \"PP\" and valor != \"P\" and valor != \"M\" and valor != \"G\" and valor != \"GG\" and valor != \"XG\":\n                    print(\"Valor n\u00e3o permitido! Apenas PP, P, M, G, GG e XG\")\n                    return\n                \n                self.__tamanho = valor\n    def get_tamanho(self) -> int: \n        return self.__tamanho\n\ndef main():\n    while True:\n        roupa = Roupa()\n        print(\"Informe o tamanho da roupa\")\n        line = input()\n        roupa.set_tamanho(line)\n        \n        print(roupa)\n        break\nmain()",
+            "lines": "26"
+        }
+    ]
+}
