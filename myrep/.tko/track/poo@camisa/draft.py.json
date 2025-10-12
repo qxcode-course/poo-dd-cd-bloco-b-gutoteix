@@ -17,8 +17,23 @@
         },
         {
             "label": "2025-10-07_19-59-39",
-            "content": "class Roupa:\n    def __init__(self):\n        self.__tamanho = \"\"\n    \n    def __str__(self):\n         return f\"O tamanho da sua roupa \u00e9: {self.__tamanho}\"\n    \n    def set_tamanho(self, valor: int) -> None: \n                if valor != \"PP\" and valor != \"P\" and valor != \"M\" and valor != \"G\" and valor != \"GG\" and valor != \"XG\":\n                    print(\"Valor n\u00e3o permitido! Apenas PP, P, M, G, GG e XG\")\n                    return\n                \n                self.__tamanho = valor\n    def get_tamanho(self) -> int: \n        return self.__tamanho\n\ndef main():\n    while True:\n        roupa = Roupa()\n        print(\"Informe o tamanho da roupa\")\n        line = input()\n        roupa.set_tamanho(line)\n        \n        print(roupa)\n        break\nmain()",
+            "content": "@@ -601,21 +601,16 @@\n Roupa()%0A\n-    %0A\n         \n",
             "lines": "26"
+        },
+        {
+            "label": "2025-10-09_12-05-57",
+            "content": "@@ -58,16 +58,20 @@\n ho = %22%22%0A\n+    \n %0A    def\n@@ -90,24 +90,25 @@\n f):%0A        \n+ \n return f%22O t\n@@ -148,16 +148,20 @@\n manho%7D%22%0A\n+    \n %0A    def\n@@ -190,21 +190,22 @@\n or: \n-str\n+int\n ) -%3E \n-bool:\n+None: \n %0A   \n@@ -213,102 +213,129 @@\n     \n-tamanhos_valido \n+        if valor !\n = \n-%5B\n %22PP%22\n-, %22P%22, %22M%22, %22G%22, %22GG%22,\n+ and valor != %22P%22 and valor != %22M%22 and valor !=\n  %22\n-X\n G%22\n-%5D%0A%0A        if valor not in tamanhos_valido:%0A\n+ and valor != %22GG%22 and valor != %22XG%22:%0A        \n     \n@@ -353,10 +353,8 @@\n nt(%22\n-%E2%9D%8C \n Valo\n@@ -401,12 +401,19 @@\n e XG\n-.\n %22)%0A\n+        \n     \n@@ -430,17 +430,34 @@\n turn\n- False %0A%0A\n+%0A                %0A        \n     \n@@ -487,31 +487,8 @@\n lor%0A\n-        return True  %0A%0A\n     \n@@ -516,12 +516,13 @@\n  -%3E \n-str:\n+int: \n %0A   \n@@ -549,17 +549,16 @@\n amanho%0A%0A\n-%0A\n def main\n@@ -561,16 +561,36 @@\n main():%0A\n+    while True:%0A    \n     roup\n@@ -604,26 +604,13 @@\n pa()\n- %0A\n %0A    \n-while True:\n %0A   \n@@ -647,17 +647,16 @@\n da roupa\n-:\n %22)%0A     \n@@ -676,27 +676,8 @@\n ut()\n-.strip().upper()  %0A\n %0A   \n@@ -681,19 +681,16 @@\n         \n-if \n roupa.se\n@@ -704,18 +704,16 @@\n ho(line)\n-: \n %0A       \n@@ -717,19 +717,13 @@\n     \n+%0A\n     \n-break%0A%0A\n     \n@@ -735,16 +735,28 @@\n (roupa)%0A\n-%0A\n+        break\n %0Amain()\n",
+            "lines": "27"
+        },
+        {
+            "label": "2025-10-11_17-50-44",
+            "content": "@@ -312,16 +312,18 @@\n  print(%22\n+%E2%9D%8C \n Valor n%C3%A3\n@@ -705,28 +705,16 @@\n   break%0A\n-            \n %0A    pri\n",
+            "lines": "35"
+        },
+        {
+            "label": "2025-10-11_18-33-34",
+            "content": "class Roupa:\n    def __init__(self):\n        self.__tamanho = \"\"\n\n    def __str__(self):\n        return f\"O tamanho da sua roupa \u00e9: {self.__tamanho}\"\n\n    def set_tamanho(self, valor: str) -> bool:\n        tamanhos_valido = [\"PP\", \"P\", \"M\", \"G\", \"GG\", \"XG\"]\n\n        if valor not in tamanhos_valido:\n            print(\"Valor n\u00e3o permitido! Apenas PP, P, M, G, GG e XG.\")\n            return False \n\n        self.__tamanho = valor\n        return True  \n\n    def get_tamanho(self) -> str:\n        return self.__tamanho\n\n\ndef main():\n    roupa = Roupa() \n\n    while True:\n        print(\"Informe o tamanho da roupa:\")\n        line = input().strip().upper()  \n\n        if roupa.set_tamanho(line): \n            break\n            \n    print(roupa)\n\n\nmain()",
+            "lines": "35"
         }
     ]
 }
