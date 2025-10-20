@@ -72,7 +72,12 @@
         },
         {
             "label": "2025-10-11_18-34-58",
-            "content": "class Roupa:\n    def __init__(self):\n        self.__tamanho = \"\"  \n\n    def set_tamanho(self, valor: str) -> None:\n        tamanhos_validos = [\"PP\", \"P\", \"M\", \"G\", \"GG\", \"XG\"]\n        if valor not in tamanhos_validos:\n            print(\"fail: Valor inv\u00e1lido, tente PP, P, M, G, GG ou XG\")\n            return\n        self.__tamanho = valor\n\n    def get_tamanho(self) -> str:\n        return self.__tamanho\n\n\ndef main():\n    roupa = Roupa()  \n\n    while True:\n        line = input().strip()\n        if not line:\n            continue\n        print(f\"${line}\")\n        parts = line.split()\n\n        if parts[0] == \"end\":\n            break\n        elif parts[0] == \"show\":\n            print(f\"size: ({roupa.get_tamanho()})\")\n        elif parts[0] == \"size\":\n            tamanhoEscolhido = parts[1]\n            roupa.set_tamanho(tamanhoEscolhido)\n\nmain()\n",
+            "content": "@@ -833,20 +833,16 @@\n olhido)%0A\n-    \n %0Amain()%0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2025-10-14_23-11-53",
+            "content": "class Roupa:\n    def __init__(self):\n        self.__tamanho = \"\"  \n\n    def set_tamanho(self, valor: str) -> None:\n        tamanhos_validos = [\"PP\", \"P\", \"M\", \"G\", \"GG\", \"XG\"]\n        if valor not in tamanhos_validos:\n            print(\"fail: Valor inv\u00e1lido, tente PP, P, M, G, GG ou XG\")\n            return\n        self.__tamanho = valor\n\n    def get_tamanho(self) -> str:\n        return self.__tamanho\n\n\ndef main():\n    roupa = Roupa()  \n\n    while True:\n        line = input().strip()\n        if not line:\n            continue\n        print(f\"${line}\")\n        parts = line.split()\n\n        if parts[0] == \"end\":\n            break\n        elif parts[0] == \"show\":\n            print(f\"size: ({roupa.get_tamanho()})\")\n        elif parts[0] == \"size\":\n            tamanhoEscolhido = parts[1]\n            roupa.set_tamanho(tamanhoEscolhido)\n    \nmain()\n",
             "lines": "34"
         }
     ]

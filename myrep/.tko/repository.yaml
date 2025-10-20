@@ -8,13 +8,13 @@ sources:
 - database: poo
   link: https://github.com/qxcodepoo/arcade/blob/master/Readme.md
   cache_path: /workspaces/poo-dd-cd-bloco-b-gutoteix/myrep/.tko/cache/poo.md
-  cache_timestamp: '2025-10-12 16:41:00'
+  cache_timestamp: '2025-10-20 18:36:36'
   filters:
   - acesso
   - simples
 expanded:
 - poo@campanha-principal
-- poo@bloco_b-modificadores-de-acesso
+- poo@bloco_b-agregação-simples
 tasks:
   poo@chinela: '{rate:100, human:monitor, alone:9, study:60}'
   poo@camisa: '{rate:70, human:monitor, alone:9, study:80}'
@@ -27,4 +27,4 @@ flags:
   graph: 1
   xray: 0
 lang: py
-selected: poo@campanha-principal
+selected: poo@motoca
