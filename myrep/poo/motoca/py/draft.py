@@ -7,13 +7,13 @@ class Pessoa:
         return f"({self.__nome}:{self.__idade})"
 
     def get_nome(self):
-        return self.__nome
+        return self.__nome	
 
     def get_idade(self):
         return self.__idade
-    
+
+
 class Moto:
-    
     def __init__(self, potencia: int = 1):
         self.potencia = potencia
         self.tempo = 0
@@ -34,6 +34,7 @@ class Moto:
             print("fail: busy motorcycle")
             return
         self.pessoa = pessoa
+
     def remover(self):
         if self.pessoa is None:
             print("fail: empty motorcycle")
@@ -59,7 +60,9 @@ class Moto:
             self.tempo = 0
         else:
             self.tempo -= tempo
-def buzinar(self):
+
+        
+    def buzinar(self):
         print("P" + "e" * self.potencia + "m")
 
 
@@ -88,3 +91,5 @@ def main():
             moto.dirigir(int(args[1]))
         elif args[0] == "honk":
             moto.buzinar()
+
+main()

@@ -76,3 +76,6 @@
 2025-10-20 19:58:46, EXEC, v:1, k:poo@motoca, mode:FULL, rate:0, size:71
 2025-10-20 19:58:52, EXEC, v:1, k:poo@motoca, mode:FULL, rate:0, size:71
 2025-10-20 19:58:56, EXEC, v:1, k:poo@motoca, mode:FULL, rate:0, size:71
+2025-10-20 19:59:46, EXEC, v:1, k:poo@motoca, mode:FULL, rate:0, size:90
+2025-10-20 19:59:55, EXEC, v:1, k:poo@motoca, mode:FULL, rate:93, size:91
+2025-10-20 20:00:16, EXEC, v:1, k:poo@motoca, mode:FULL, rate:100, size:95

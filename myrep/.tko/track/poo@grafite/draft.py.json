@@ -1,0 +1,254 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-25_20-42-11",
+            "content": "@@ -1,150 +0,0 @@\n-class Grafite:%0A%0Aclass Lapiseira:%0A%0A    def __init__(self):%0A        self.ponta = 0%0A%0A    def hasGrafite(self) -%3E bool:%0A%0A    def insert(self, l) -%3E bool:%0A\n",
+            "lines": "0"
+        },
+        {
+            "label": "2025-10-25_20-54-39",
+            "content": "@@ -135,43 +135,16 @@\n lf, \n-grafite: Grafite) -%3E bool:%0A    %0A    def\n+l) -%3E bool:%0A\n",
+            "lines": "10"
+        },
+        {
+            "label": "2025-10-25_20-55-18",
+            "content": "@@ -72,20 +72,17 @@\n ponta = \n-None\n+0\n %0A%0A    de\n@@ -174,49 +174,4 @@\n  def\n- remove(self) -%3E Grafite %7C None%0A%0A    def writ\n",
+            "lines": "12"
+        },
+        {
+            "label": "2025-10-25_20-56-21",
+            "content": "@@ -82,52 +82,8 @@\n ne%0A%0A\n-    def __str__(self):%0A         return f%22%22%0A%0A\n     \n@@ -222,26 +222,4 @@\n writ\n-ePage(self) -%3E None:%0A%0A\n",
+            "lines": "14"
+        },
+        {
+            "label": "2025-10-25_20-57-45",
+            "content": "@@ -13,14 +13,8 @@\n e:%0A%0A\n-    %0A%0A\n clas\n",
+            "lines": "18"
+        },
+        {
+            "label": "2025-10-25_21-02-30",
+            "content": "@@ -3,543 +3,22 @@\n ass \n-Lead:%0A    def __init__(self, thickness: float, hardness: str, size: int):%0A        self.thickness = thickness%0A        self.hardness = hardness%0A        self.size = size%0A%0A    def usagePerSheet(self) -%3E int:%0A        if self.hardness == %22HB%22:%0A            return 1%0A        elif self.hardness == %222B%22:%0A            return 2%0A        elif self.hardness == %224B%22:%0A            return 4%0A        elif self.hardness == %226B%22:%0A            return 6%0A        return 0%0A%0A    def __str__(self):%0A        return f%22%5B%7Bself.thickness%7D:%7Bself.hardness%7D:%7Bself.size%7D%5D%22\n+Grafite:%0A%0A    \n %0A%0Acl\n@@ -70,18 +70,16 @@\n    self.\n-__\n ponta = \n@@ -86,9 +86,8 @@\n None\n-x\n %0A%0A  \n",
+            "lines": "20"
+        },
+        {
+            "label": "2025-10-25_21-07-46",
+            "content": "@@ -536,8 +536,286 @@\n ize%7D%5D%22%0A%0A\n+class Lapiseira:%0A%0A    def __init__(self):%0A        self.__ponta = Nonex%0A%0A    def __str__(self):%0A         return f%22%22%0A%0A    def hasGrafite(self) -%3E bool:%0A%0A    def insert(self, grafite: Grafite) -%3E bool:%0A    %0A    def remove(self) -%3E Grafite %7C None%0A%0A    def writePage(self) -%3E None:%0A%0A\n",
+            "lines": "36"
+        },
+        {
+            "label": "2025-10-25_21-08-05",
+            "content": "@@ -450,10 +450,94 @@\n n 0%0A%0A   \n+ def __str__(self):%0A        return f%22%5B%7Bself.thickness%7D:%7Bself.hardness%7D:%7Bself.size%7D%5D%22\n %0A%0A\n",
+            "lines": "20"
+        },
+        {
+            "label": "2025-10-25_21-10-29",
+            "content": "@@ -451,96 +451,8 @@\n  0%0A%0A\n-    def __str__(self):%0A        return f%22%5B%7Bself.thickness%7D:%7Bself.hardness%7D:%7Bself.size%7D%5D%22%0A\n    %0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2025-10-25_21-11-03",
+            "content": "@@ -543,162 +543,5 @@\n    %0A\n-    class Pencil:%0A        def __init__(self, thickness: float):%0A            self.thickness = thickness%0A            self.tip = None  # grafite inserido (Lead)\n %0A\n",
+            "lines": "21"
+        },
+        {
+            "label": "2025-10-25_21-11-26",
+            "content": "@@ -701,90 +701,4 @@\n ad)%0A\n-        %0A        def hasGrafite(self) -%3E bool:%0A            return self.tip is not None\n",
+            "lines": "24"
+        },
+        {
+            "label": "2025-10-25_21-11-52",
+            "content": "@@ -787,282 +787,4 @@\n None\n-%0A        %0A        def insert(self, lead: Lead):%0A        if self.hasGrafite():%0A            print(%22fail: ja existe grafite%22)%0A            return%0A        if lead.thickness != self.thickness:%0A            print(%22fail: calibre incompativel%22)%0A            return%0A        self.tip = lead%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2025-10-25_21-12-30",
+            "content": "@@ -697,16 +697,24 @@\n  (Lead)%0A\n+        \n %0A       \n@@ -748,24 +748,28 @@\n ol:%0A        \n+  \n+  \n return self.\n@@ -784,16 +784,24 @@\n ot None%0A\n+        \n %0A       \n",
+            "lines": "36"
+        },
+        {
+            "label": "2025-10-25_21-13-12",
+            "content": "@@ -740,28 +740,24 @@\n ol:%0A        \n-    \n return self.\n@@ -772,16 +772,16 @@\n ot None%0A\n+\n %0A       \n@@ -815,28 +815,24 @@\n d):%0A        \n-    \n if self.hasG\n@@ -841,20 +841,16 @@\n fite():%0A\n-    \n         \n@@ -894,39 +894,31 @@\n             \n-  \n-  \n return%0A\n-    \n         if l\n@@ -950,20 +950,16 @@\n ckness:%0A\n-    \n         \n@@ -1013,28 +1013,24 @@\n      return%0A\n-    \n         self\n",
+            "lines": "36"
+        },
+        {
+            "label": "2025-10-25_21-13-39",
+            "content": "@@ -819,21 +819,8 @@\n d):%0A\n-            %0A\n     \n@@ -1022,20 +1022,16 @@\n tivel%22)%0A\n-    \n         \n",
+            "lines": "36"
+        },
+        {
+            "label": "2025-10-25_21-14-06",
+            "content": "@@ -1089,239 +1089,5 @@\n lead\n- %0A        %0A        def remove(self):%0A            if not self.hasGrafite():%0A                print(%22fail: nao existe grafite%22)%0A                return%0A            removed = self.tip%0A            self.tip = None%0A            return removed%0A\n %0A\n",
+            "lines": "37"
+        },
+        {
+            "label": "2025-10-25_21-14-42",
+            "content": "@@ -1192,20 +1192,136 @@\n ail: nao existe graf\n+ite%22)%0A                return%0A            removed = self.tip%0A            self.tip = None%0A            return removed%0A%0A\n",
+            "lines": "46"
+        },
+        {
+            "label": "2025-10-25_21-14-47",
+            "content": "@@ -1208,120 +1208,4 @@\n graf\n-ite%22)%0A                return%0A            removed = self.tip%0A            self.tip = None%0A            return removed%0A%0A\n",
+            "lines": "41"
+        },
+        {
+            "label": "2025-10-25_21-15-08",
+            "content": "@@ -777,16 +777,24 @@\n t None%0A%0A\n+        \n def inse\n",
+            "lines": "46"
+        },
+        {
+            "label": "2025-10-25_21-15-26",
+            "content": "@@ -1092,28 +1092,24 @@\n    %0A        \n-    \n def remove(s\n@@ -1110,28 +1110,24 @@\n move(self):%0A\n-    \n             \n@@ -1144,36 +1144,32 @@\n f.hasGrafite():%0A\n-    \n                 \n",
+            "lines": "46"
+        },
+        {
+            "label": "2025-10-25_21-15-40",
+            "content": "@@ -539,16 +539,20 @@\n %7D%5D%22%0A   %0A\n+    \n class Pe\n@@ -777,24 +777,16 @@\n t None%0A%0A\n-        \n def inse\n",
+            "lines": "46"
+        },
+        {
+            "label": "2025-10-25_21-16-19",
+            "content": "@@ -1253,20 +1253,16 @@\n         \n-    \n removed \n@@ -1276,36 +1276,32 @@\n tip%0A            \n-    \n self.tip = None%0A\n@@ -1300,20 +1300,16 @@\n  = None%0A\n-    \n         \n",
+            "lines": "46"
+        },
+        {
+            "label": "2025-10-25_21-16-51",
+            "content": "@@ -1096,24 +1096,28 @@\n    %0A        \n+    \n def remove(s\n@@ -1114,32 +1114,36 @@\n f remove(self):%0A\n+    \n             if n\n@@ -1156,32 +1156,36 @@\n f.hasGrafite():%0A\n+    \n                 \n",
+            "lines": "46"
+        },
+        {
+            "label": "2025-10-25_21-17-13",
+            "content": "@@ -1332,636 +1332,4 @@\n ed%0A%0A\n-        def writePage(self):%0A        if not self.hasGrafite():%0A            print(%22fail: nao existe grafite%22)%0A            return%0A%0A        gasto = self.tip.usagePerSheet()%0A%0A        # Se o tamanho for insuficiente para come%C3%A7ar%0A        if self.tip.size %3C= 10:%0A            print(%22fail: tamanho insuficiente%22)%0A            return%0A%0A        # tamanho final ap%C3%B3s escrever%0A        final = self.tip.size - gasto%0A%0A        if final %3C 10:%0A            # escreve parcialmente e para%0A            self.tip.size = 10%0A            print(%22fail: folha incompleta%22)%0A            return%0A%0A        # consegue escrever normalmente%0A        self.tip.size -= gasto%0A\n",
+            "lines": "46"
+        },
+        {
+            "label": "2025-10-25_21-17-45",
+            "content": "@@ -1357,36 +1357,32 @@\n (self):%0A        \n-    \n if not self.hasG\n@@ -1383,36 +1383,32 @@\n f.hasGrafite():%0A\n-    \n             prin\n@@ -1449,35 +1449,24 @@\n         \n-    \n return%0A\n-        \n+%0A\n         \n",
+            "lines": "69"
+        },
+        {
+            "label": "2025-10-25_21-19-14",
+            "content": "@@ -1571,36 +1571,32 @@\n come%C3%A7ar%0A        \n-    \n if self.tip.size\n@@ -1599,28 +1599,24 @@\n size %3C= 10:%0A\n-    \n             \n@@ -1655,36 +1655,32 @@\n e%22)%0A            \n-  \n-  \n return%0A%0A        \n@@ -1717,20 +1717,16 @@\n         \n-    \n final = \n@@ -1748,20 +1748,16 @@\n  gasto%0A%0A\n-    \n         \n@@ -1948,20 +1948,16 @@\n almente%0A\n-    \n         \n",
+            "lines": "68"
+        },
+        {
+            "label": "2025-10-25_21-19-35",
+            "content": "@@ -1518,16 +1518,68 @@\n heet()%0A%0A\n+        # Se o tamanho for insuficiente para come%C3%A7ar\n %0A       \n@@ -1678,32 +1678,33 @@\n      return%0A\n+%0A\n         \n         fina\n@@ -1691,24 +1691,54 @@\n         \n+# tamanho final ap%C3%B3s escrever%0A\n         \n final = \n@@ -1729,16 +1729,20 @@\n         \n+    \n final = \n@@ -1776,20 +1776,16 @@\n         \n-    \n if final\n@@ -1791,32 +1791,66 @@\n l %3C 10:%0A        \n+    # escreve parcialmente e para%0A\n             self\n@@ -1864,24 +1864,16 @@\n ze = 10%0A\n-        \n         \n@@ -1920,39 +1920,32 @@\n         \n-        \n return%0A\n+%0A\n         \n         \n@@ -1928,32 +1928,64 @@\n return%0A%0A        \n+# consegue escrever normalmente%0A\n             self\n",
+            "lines": "68"
+        },
+        {
+            "label": "2025-10-25_21-20-39",
+            "content": "@@ -553,16 +553,20 @@\n Pencil:%0A\n+    \n     def \n@@ -694,16 +694,20 @@\n (Lead)%0A%0A\n+    \n     def \n@@ -773,16 +773,20 @@\n t None%0A%0A\n+    \n     def \n@@ -820,24 +820,28 @@\n            %0A\n+    \n         if s\n@@ -938,16 +938,20 @@\n         \n+    \n if lead.\n@@ -1088,24 +1088,28 @@\n d %0A        %0A\n+    \n     def remo\n@@ -1110,32 +1110,36 @@\n f remove(self):%0A\n+    \n         if not s\n@@ -1160,32 +1160,36 @@\n ():%0A            \n+ \n+   \n print(%22fail: nao\n@@ -1210,32 +1210,36 @@\n e%22)%0A            \n+    \n return%0A         \n@@ -1241,16 +1241,20 @@\n         \n+  \n+  \n removed \n@@ -1268,32 +1268,36 @@\n tip%0A            \n+    \n self.tip = None%0A\n@@ -1304,24 +1304,28 @@\n             \n+   \n+ \n return remov\n@@ -1328,16 +1328,20 @@\n emoved%0A%0A\n+    \n     def \n@@ -1349,32 +1349,36 @@\n ritePage(self):%0A\n+    \n         if not s\n@@ -1519,32 +1519,36 @@\n eet()%0A%0A%0A        \n+    \n if self.tip.size\n@@ -1551,24 +1551,28 @@\n size %3C= 10:%0A\n+    \n             \n@@ -1611,39 +1611,47 @@\n e%22)%0A            \n+ \n+   \n return%0A\n+    \n             fina\n@@ -1689,16 +1689,20 @@\n         \n+  \n+  \n if final\n@@ -1704,24 +1704,28 @@\n final %3C 10:%0A\n+    \n             \n@@ -1755,32 +1755,36 @@\n                 \n+   \n+ \n print(%22fail: fol\n@@ -1807,39 +1807,47 @@\n                 \n+    \n return%0A\n+    \n                 \n",
+            "lines": "63"
+        },
+        {
+            "label": "2025-10-25_21-22-11",
+            "content": "@@ -846,32 +846,36 @@\n ():%0A            \n+    \n print(%22fail: ja \n@@ -883,32 +883,36 @@\n xiste grafite%22)%0A\n+    \n             retu\n@@ -963,32 +963,36 @@\n ss:%0A            \n+  \n+  \n print(%22fail: cal\n@@ -1015,39 +1015,47 @@\n l%22)%0A            \n+    \n return%0A\n+    \n         self.tip\n",
+            "lines": "63"
+        },
+        {
+            "label": "2025-10-25_21-22-17",
+            "content": "@@ -728,24 +728,28 @@\n ol:%0A        \n+    \n return self.\n",
+            "lines": "63"
+        },
+        {
+            "label": "2025-10-25_21-23-29",
+            "content": "@@ -1757,26 +1757,4 @@\n sto%0A\n-%0Adef main():%0A%0A%0A%0Amain()\n",
+            "lines": "63"
+        },
+        {
+            "label": "2025-10-25_21-26-02",
+            "content": "@@ -1771,172 +1771,8 @@\n ):%0A%0A\n-    pencil = None    %0A    while True:%0A            try:%0A                line = input()%0A            except EOFError:%0A                break%0A            if line == %22%22:%0A\n %0A%0Ama\n",
+            "lines": "69"
+        },
+        {
+            "label": "2025-10-25_21-27-15",
+            "content": "@@ -663,16 +663,41 @@\n = None  \n+# grafite inserido (Lead)\n %0A%0A    de\n@@ -1817,701 +1817,126 @@\n     \n-try:%0A            line = input()%0A        except EOFError:%0A                break%0A        if line == %22%22:%0A            continue%0A    %0A        args = line.split() %0A%0A        if args%5B0%5D == %22$end%22:%0A            break%0A        elif args%5B0%5D == %22$init%22:%0A            calibre = float(args%5B1%5D)%0A            pencil = Pencil(calibre)%0A        elif args%5B0%5D == %22$show%22:%0A            print(pencil)%0A        elif args%5B0%5D == %22$insert%22:%0A            calibre = float(args%5B1%5D)%0A            dureza = args%5B2%5D%0A            tamanho = int(args%5B3%5D)%0A            pencil.insert(Lead(calibre, dureza, tamanho))%0A        elif args%5B0%5D == %22$remove%22:%0A            pencil.remove()%0A        elif args%5B0%5D == %22$write%22:%0A            pencil.writePage()\n+    try:%0A                line = input()%0A            except EOFError:%0A                break%0A            if line == %22%22:%0A\n %0A%0Ama\n",
+            "lines": "76"
+        },
+        {
+            "label": "2025-10-25_21-32-53",
+            "content": "@@ -535,17 +535,19 @@\n size%7D%5D%22%0A\n-%0A\n+   \n %0Aclass P\n@@ -595,32 +595,36 @@\n float):%0A        \n+    \n self.thickness =\n@@ -634,32 +634,36 @@\n ickness%0A        \n+    \n self.tip = None \n@@ -667,33 +667,8 @@\n ne  \n-# grafite inserido (Lead)\n %0A%0A  \n@@ -770,16 +770,29 @@\n  Lead):%0A\n+            %0A\n         \n@@ -1012,17 +1012,26 @@\n p = lead\n-%0A\n+ %0A        \n %0A    def\n@@ -1152,16 +1152,20 @@\n         \n+    \n removed \n@@ -1175,32 +1175,36 @@\n elf.tip%0A        \n+  \n+  \n self.tip = None%0A\n@@ -1199,24 +1199,28 @@\n .tip = None%0A\n+    \n         retu\n@@ -1294,32 +1294,36 @@\n ():%0A            \n+  \n+  \n print(%22fail: nao\n@@ -1348,32 +1348,43 @@\n             \n+    \n return%0A\n-%0A\n+        \n         gast\n@@ -1417,60 +1417,8 @@\n ()%0A%0A\n-        # Se o tamanho for insuficiente para come%C3%A7ar\n %0A   \n@@ -1517,47 +1517,12 @@\n urn%0A\n-%0A\n     \n-    # tamanho final ap%C3%B3s escrever%0A\n     \n@@ -1564,16 +1564,20 @@\n         \n+    \n if final\n@@ -1591,46 +1591,8 @@\n     \n-        # escreve parcialmente e para%0A\n     \n@@ -1618,16 +1618,20 @@\n ze = 10%0A\n+    \n         \n@@ -1682,24 +1682,27 @@\n     \n+   \n+ \n return%0A\n-%0A\n         \n # co\n@@ -1701,40 +1701,8 @@\n     \n-# consegue escrever normalmente%0A\n     \n@@ -1733,255 +1733,25 @@\n to%0A%0A\n-    def __str__(self\n+def main(\n ):%0A\n+%0A\n     \n-    grafite_str = str(self.tip) if self.tip else %22null%22%0A        return f%22calibre: %7Bself.thickness%7D, grafite: %7Bgrafite_str%7D%22%0A%0A%0A# ================== SHELL (exemplo de uso) ==================%0Aif __name__ == %22__main__%22:%0A    \n penc\n@@ -1755,24 +1755,28 @@\n encil = None\n+    \n %0A    while T\n@@ -1849,32 +1849,36 @@\n or:%0A            \n+    \n break%0A        if\n@@ -1911,16 +1911,21 @@\n ontinue%0A\n+    %0A\n         \n@@ -1943,16 +1943,18 @@\n .split()\n+ %0A\n %0A       \n@@ -1958,21 +1958,18 @@\n     \n-cmd =\n+if\n  args%5B0%5D\n %0A%0A  \n@@ -1968,24 +1968,8 @@\n s%5B0%5D\n-%0A%0A        if cmd\n  == \n@@ -1999,35 +1999,39 @@\n ak%0A        elif \n-cmd\n+args%5B0%5D\n  == %22$init%22:%0A   \n@@ -2110,27 +2110,31 @@\n        elif \n-cmd\n+args%5B0%5D\n  == %22$show%22:\n@@ -2169,27 +2169,31 @@\n        elif \n-cmd\n+args%5B0%5D\n  == %22$insert\n@@ -2363,27 +2363,31 @@\n        elif \n-cmd\n+args%5B0%5D\n  == %22$remove\n@@ -2434,11 +2434,15 @@\n lif \n-cmd\n+args%5B0%5D\n  == \n@@ -2478,12 +2478,19 @@\n writePage()%0A\n+%0Amain()\n",
+            "lines": "95"
+        },
+        {
+            "label": "2025-10-25_21-33-06",
+            "content": "@@ -535,19 +535,17 @@\n size%7D%5D%22%0A\n-   \n+%0A\n %0Aclass P\n@@ -597,28 +597,24 @@\n t):%0A        \n-    \n self.thickne\n@@ -628,36 +628,32 @@\n ickness%0A        \n-    \n self.tip = None \n@@ -653,16 +653,41 @@\n = None  \n+# grafite inserido (Lead)\n %0A%0A    de\n@@ -789,21 +789,8 @@\n d):%0A\n-            %0A\n     \n@@ -1014,26 +1014,17 @@\n p = lead\n- %0A        \n+%0A\n %0A    def\n@@ -1145,20 +1145,16 @@\n         \n-    \n removed \n@@ -1164,36 +1164,32 @@\n elf.tip%0A        \n-  \n-  \n self.tip = None%0A\n@@ -1188,20 +1188,16 @@\n  = None%0A\n-    \n         \n@@ -1275,36 +1275,32 @@\n ():%0A            \n-  \n-  \n print(%22fail: nao\n@@ -1333,34 +1333,24 @@\n     \n-    \n return%0A\n-       \n+%0A\n         \n  gas\n@@ -1345,17 +1345,16 @@\n         \n- \n gasto = \n@@ -1379,16 +1379,68 @@\n heet()%0A%0A\n+        # Se o tamanho for insuficiente para come%C3%A7ar\n %0A       \n@@ -1523,36 +1523,71 @@\n          return%0A\n+%0A\n     \n+    # tamanho final ap%C3%B3s escrever%0A\n         final = \n@@ -1617,20 +1617,16 @@\n         \n-    \n if final\n@@ -1628,32 +1628,70 @@\n final %3C 10:%0A    \n+        # escreve parcialmente e para%0A\n             self\n@@ -1705,20 +1705,16 @@\n ze = 10%0A\n-    \n         \n@@ -1761,35 +1761,32 @@\n         \n-   \n- \n return%0A\n+%0A\n         \n         \n@@ -1781,74 +1781,332 @@\n     \n-        self.tip.size -= gasto%0A%0Adef main():%0A%0A    pencil = None    \n+# consegue escrever normalmente%0A        self.tip.size -= gasto%0A%0A    def __str__(self):%0A        grafite_str = str(self.tip) if self.tip else %22null%22%0A        return f%22calibre: %7Bself.thickness%7D, grafite: %7Bgrafite_str%7D%22%0A%0A%0A# ================== SHELL (exemplo de uso) ==================%0Aif __name__ == %22__main__%22:%0A    pencil = None\n %0A   \n@@ -2187,36 +2187,32 @@\n or:%0A            \n-    \n break%0A        if\n@@ -2249,13 +2249,8 @@\n nue%0A\n-    %0A\n     \n@@ -2276,10 +2276,8 @@\n it()\n- %0A\n %0A   \n@@ -2281,26 +2281,29 @@\n         \n-if\n+cmd =\n  args%5B0%5D\n  == %22$en\n@@ -2290,24 +2290,40 @@\n md = args%5B0%5D\n+%0A%0A        if cmd\n  == %22$end%22:%0A\n@@ -2345,39 +2345,35 @@\n ak%0A        elif \n-args%5B0%5D\n+cmd\n  == %22$init%22:%0A   \n@@ -2452,31 +2452,27 @@\n        elif \n-args%5B0%5D\n+cmd\n  == %22$show%22:\n@@ -2507,31 +2507,27 @@\n        elif \n-args%5B0%5D\n+cmd\n  == %22$insert\n@@ -2697,31 +2697,27 @@\n        elif \n-args%5B0%5D\n+cmd\n  == %22$remove\n@@ -2760,23 +2760,19 @@\n    elif \n-args%5B0%5D\n+cmd\n  == %22$wr\n@@ -2812,11 +2812,4 @@\n e()%0A\n-%0Amain()\n",
+            "lines": "104"
+        },
+        {
+            "label": "2025-10-25_21-33-30",
+            "content": "@@ -535,17 +535,19 @@\n size%7D%5D%22%0A\n-%0A\n+   \n %0Aclass P\n@@ -595,32 +595,36 @@\n float):%0A        \n+    \n self.thickness =\n@@ -634,32 +634,36 @@\n ickness%0A        \n+    \n self.tip = None \n@@ -667,33 +667,8 @@\n ne  \n-# grafite inserido (Lead)\n %0A%0A  \n@@ -770,16 +770,29 @@\n  Lead):%0A\n+            %0A\n         \n@@ -1012,17 +1012,26 @@\n p = lead\n-%0A\n+ %0A        \n %0A    def\n@@ -1152,16 +1152,20 @@\n         \n+    \n removed \n@@ -1175,32 +1175,36 @@\n elf.tip%0A        \n+  \n+  \n self.tip = None%0A\n@@ -1199,24 +1199,28 @@\n .tip = None%0A\n+    \n         retu\n@@ -1294,32 +1294,36 @@\n ():%0A            \n+  \n+  \n print(%22fail: nao\n@@ -1348,32 +1348,43 @@\n             \n+    \n return%0A\n-%0A\n+        \n         gast\n@@ -1417,60 +1417,8 @@\n ()%0A%0A\n-        # Se o tamanho for insuficiente para come%C3%A7ar\n %0A   \n@@ -1517,47 +1517,12 @@\n urn%0A\n-%0A\n     \n-    # tamanho final ap%C3%B3s escrever%0A\n     \n@@ -1564,16 +1564,20 @@\n         \n+    \n if final\n@@ -1591,46 +1591,8 @@\n     \n-        # escreve parcialmente e para%0A\n     \n@@ -1618,16 +1618,20 @@\n ze = 10%0A\n+    \n         \n@@ -1682,24 +1682,27 @@\n     \n+   \n+ \n return%0A\n-%0A\n         \n # co\n@@ -1701,40 +1701,8 @@\n     \n-# consegue escrever normalmente%0A\n     \n@@ -1733,255 +1733,25 @@\n to%0A%0A\n-    def __str__(self\n+def main(\n ):%0A\n+%0A\n     \n-    grafite_str = str(self.tip) if self.tip else %22null%22%0A        return f%22calibre: %7Bself.thickness%7D, grafite: %7Bgrafite_str%7D%22%0A%0A%0A# ================== SHELL (exemplo de uso) ==================%0Aif __name__ == %22__main__%22:%0A    \n penc\n@@ -1755,24 +1755,28 @@\n encil = None\n+    \n %0A    while T\n@@ -1849,32 +1849,36 @@\n or:%0A            \n+    \n break%0A        if\n@@ -1911,16 +1911,21 @@\n ontinue%0A\n+    %0A\n         \n@@ -1943,16 +1943,18 @@\n .split()\n+ %0A\n %0A       \n@@ -1958,21 +1958,18 @@\n     \n-cmd =\n+if\n  args%5B0%5D\n %0A%0A  \n@@ -1968,24 +1968,8 @@\n s%5B0%5D\n-%0A%0A        if cmd\n  == \n@@ -1999,35 +1999,39 @@\n ak%0A        elif \n-cmd\n+args%5B0%5D\n  == %22$init%22:%0A   \n@@ -2110,27 +2110,31 @@\n        elif \n-cmd\n+args%5B0%5D\n  == %22$show%22:\n@@ -2169,27 +2169,31 @@\n        elif \n-cmd\n+args%5B0%5D\n  == %22$insert\n@@ -2363,27 +2363,31 @@\n        elif \n-cmd\n+args%5B0%5D\n  == %22$remove\n@@ -2434,11 +2434,15 @@\n lif \n-cmd\n+args%5B0%5D\n  == \n",
+            "lines": "95"
+        },
+        {
+            "label": "2025-10-25_21-34-22",
+            "content": "@@ -663,16 +663,25 @@\n grafite \n+inserido \n (Lead)%0A%0A\n@@ -1145,31 +1145,81 @@\n         \n-self.tip = None\n+removed = self.tip%0A        self.tip = None%0A        return removed\n %0A%0A    de\n@@ -1524,32 +1524,70 @@\n         return%0A%0A\n+        # tamanho final ap%C3%B3s escrever%0A\n         final = \n@@ -1621,66 +1621,64 @@\n     \n-# Se n%C3%A3o consegue completar a folha%0A        if final %3C 10:\n+if final %3C 10:%0A            # escreve parcialmente e para\n %0A   \n@@ -1783,20 +1783,16 @@\n   # \n-Caso consiga\n+consegue\n  esc\n@@ -1879,16 +1879,20 @@\n  grafite\n+_str\n  = str(s\n@@ -1989,23 +1989,105 @@\n fite\n+_str\n %7D%22%0A%0A%0A\n-def \n+# ================== SHELL (exemplo de uso) ==================%0Aif __name__ == %22__\n main\n-()\n+__%22\n :%0A  \n@@ -2216,16 +2216,18 @@\n  if \n-not \n line\n+ == %22%22\n :%0A  \n@@ -2245,17 +2245,16 @@\n ontinue%0A\n-%0A\n         \n@@ -2340,17 +2340,16 @@\n   break%0A\n-%0A\n         \n@@ -2443,17 +2443,16 @@\n alibre)%0A\n-%0A\n         \n@@ -2498,17 +2498,16 @@\n pencil)%0A\n-%0A\n         \n@@ -2646,15 +2646,22 @@\n     \n-lead = \n+pencil.insert(\n Lead\n@@ -2690,41 +2690,9 @@\n nho)\n-%0A            pencil.insert(lead)%0A\n+)\n %0A   \n@@ -2747,17 +2747,16 @@\n emove()%0A\n-%0A\n         \n@@ -2813,43 +2813,10 @@\n ()%0A%0A\n-%0Aif __name__ == %22__main__%22:%0A    \n main()\n-%0A\n",
+            "lines": "106"
+        },
+        {
+            "label": "2025-10-25_21-34-55",
+            "content": "@@ -2122,102 +2122,8 @@\n 0%5D%0A%0A\n-        # remove cifr%C3%A3o se existir%0A        if cmd.startswith(%22$%22):%0A            cmd = cmd%5B1:%5D%0A%0A\n     \n@@ -2137,16 +2137,17 @@\n cmd == %22\n+$\n end%22:%0A  \n@@ -2154,32 +2154,33 @@\n           break%0A\n+%0A\n         elif cmd\n@@ -2184,16 +2184,17 @@\n cmd == %22\n+$\n init%22:%0A \n@@ -2266,16 +2266,17 @@\n alibre)%0A\n+%0A\n         \n@@ -2288,16 +2288,17 @@\n cmd == %22\n+$\n show%22:%0A \n@@ -2322,16 +2322,17 @@\n pencil)%0A\n+%0A\n         \n@@ -2344,16 +2344,17 @@\n cmd == %22\n+$\n insert%22:\n@@ -2537,16 +2537,17 @@\n t(lead)%0A\n+%0A\n         \n@@ -2559,16 +2559,17 @@\n cmd == %22\n+$\n remove%22:\n@@ -2597,16 +2597,17 @@\n emove()%0A\n+%0A\n         \n@@ -2619,16 +2619,17 @@\n cmd == %22\n+$\n write%22:%0A\n@@ -2660,14 +2660,47 @@\n Page()%0A%0A\n+%0A\n+if __name__ == %22__main__%22:%0A    \n main()\n+%0A\n",
+            "lines": "111"
+        },
+        {
+            "label": "2025-10-25_21-39-17",
+            "content": "@@ -667,21 +667,15 @@\n ite \n-atual \n (Lead)%0A\n+\n %0A   \n@@ -1334,18 +1334,9 @@\n   # \n-Verifica s\n+S\n e o \n@@ -1347,10 +1347,14 @@\n nho \n-%C3%A9 \n+for in\n sufi\n@@ -2071,95 +2071,8 @@\n ue%0A%0A\n-        # imprime o comando digitado (eco, necess%C3%A1rio para o Tio)%0A        print(line)%0A%0A\n     \n@@ -2135,18 +2135,16 @@\n  remove \n-o \n cifr%C3%A3o s\n@@ -2747,43 +2747,10 @@\n ()%0A%0A\n-%0Aif __name__ == %22__main__%22:%0A    \n main()\n-%0A\n",
+            "lines": "108"
+        },
+        {
+            "label": "2025-10-25_21-41-48",
+            "content": "@@ -1137,40 +1137,8 @@\n turn\n- None%0A        removed = self.tip\n %0A   \n@@ -1161,31 +1161,8 @@\n None\n-%0A        return removed\n %0A%0A  \n@@ -2092,176 +2092,63 @@\n   # \n-Normaliza eco: imprime com '$' no come%C3%A7o (se j%C3%A1 tiver, n%C3%A3o duplica)%0A        if line.startswith(%22$%22):%0A            echo = line%0A        else:%0A            echo = f%22$%7Bline%7D%22\n+imprime o comando digitado (eco, necess%C3%A1rio para o Tio)\n %0A   \n@@ -2162,12 +2162,12 @@\n int(\n-echo\n+line\n )%0A%0A \n@@ -2256,29 +2256,8 @@\n stir\n- para o processamento\n %0A   \n@@ -2489,278 +2489,8 @@\n w%22:%0A\n-            # em caso de pencil ser None (show antes de init) imprime algo consistente%0A            if pencil is None:%0A                # comportamento n%C3%A3o especificado no enunciado; evitar crash%0A                print(%22calibre: None, grafite: null%22)%0A            else:%0A    \n     \n",
+            "lines": "113"
+        },
+        {
+            "label": "2025-10-25_21-43-01",
+            "content": "@@ -653,16 +653,38 @@\n = None  \n+# grafite atual (Lead)\n %0A%0A    de\n@@ -1381,16 +1381,74 @@\n heet()%0A%0A\n+        # Verifica se o tamanho %C3%A9 suficiente para come%C3%A7ar%0A\n         \n@@ -1576,16 +1576,61 @@\n  - gasto\n+%0A%0A        # Se n%C3%A3o consegue completar a folha\n %0A       \n@@ -1732,32 +1732,76 @@\n         return%0A%0A\n+        # Caso consiga escrever normalmente%0A\n         self.tip\n@@ -2133,16 +2133,94 @@\n ntinue%0A%0A\n+        # Normaliza eco: imprime com '$' no come%C3%A7o (se j%C3%A1 tiver, n%C3%A3o duplica)%0A\n         \n@@ -2384,16 +2384,74 @@\n rgs%5B0%5D%0A%0A\n+        # remove o cifr%C3%A3o se existir para o processamento%0A\n         \n@@ -2690,41 +2690,189 @@\n     \n-if pencil is None:%0A              \n+# em caso de pencil ser None (show antes de init) imprime algo consistente%0A            if pencil is None:%0A                # comportamento n%C3%A3o especificado no enunciado; evitar crash\n %0A   \n@@ -3297,23 +3297,52 @@\n writePage()%0A\n+%0A%0Aif __name__ == %22__main__%22:%0A\n     main()%0A\n",
+            "lines": "124"
+        },
+        {
+            "label": "2025-10-25_21-44-27",
+            "content": "@@ -657,30 +657,8 @@\n ne  \n-# grafite atual (Lead)\n %0A%0A  \n@@ -1363,66 +1363,8 @@\n ()%0A%0A\n-        # Verifica se o tamanho %C3%A9 suficiente para come%C3%A7ar%0A\n     \n@@ -1500,53 +1500,8 @@\n asto\n-%0A%0A        # Se n%C3%A3o consegue completar a folha\n %0A   \n@@ -1619,52 +1619,8 @@\n rn%0A%0A\n-        # Caso consiga escrever normalmente%0A\n     \n@@ -1968,86 +1968,8 @@\n ue%0A%0A\n-        # Normaliza eco: imprime com '$' no come%C3%A7o (se j%C3%A1 tiver, n%C3%A3o duplica)%0A\n     \n@@ -2141,66 +2141,8 @@\n 0%5D%0A%0A\n-        # remove o cifr%C3%A3o se existir para o processamento%0A\n     \n@@ -2385,189 +2385,41 @@\n     \n-# em caso de pencil ser None (show antes de init) imprime algo consistente%0A            if pencil is None:%0A                # comportamento n%C3%A3o especificado no enunciado; evitar crash\n+if pencil is None:%0A              \n %0A   \n@@ -2852,37 +2852,8 @@\n e()%0A\n-%0A%0Aif __name__ == %22__main__%22:%0A\n     \n",
+            "lines": "114"
+        },
+        {
+            "label": "2025-10-25_21-44-50",
+            "content": "@@ -3303,16 +3303,42 @@\n age()%0A%0A%0A\n+if __name__ == %22__main__%22:\n %0A    mai\n",
+            "lines": "124"
+        },
+        {
+            "label": "2025-10-25_21-45-01",
+            "content": "@@ -3307,34 +3307,8 @@\n )%0A%0A%0A\n-if __name__ == %22__main__%22:\n %0A   \n",
+            "lines": "124"
+        },
+        {
+            "label": "2025-10-25_21-45-21",
+            "content": "@@ -653,16 +653,38 @@\n = None  \n+# grafite atual (Lead)\n %0A%0A    de\n@@ -1381,32 +1381,81 @@\n heet()%0A%0A        \n+# Verifica se o tamanho %C3%A9 suficiente para come%C3%A7ar\n %0A        if self\n@@ -1578,32 +1578,67 @@\n  gasto%0A%0A        \n+# Se n%C3%A3o consegue completar a folha\n %0A        if fina\n@@ -1739,32 +1739,68 @@\n  return%0A%0A       \n+ # Caso consiga escrever normalmente\n %0A        self.ti\n@@ -2136,24 +2136,94 @@\n nue%0A%0A       \n+ # Normaliza eco: imprime com '$' no come%C3%A7o (se j%C3%A1 tiver, n%C3%A3o duplica)\n %0A        if \n@@ -2392,16 +2392,65 @@\n         \n+# remove o cifr%C3%A3o se existir para o processamento\n %0A       \n@@ -2690,26 +2690,189 @@\n     \n-if pencil is None:\n+# em caso de pencil ser None (show antes de init) imprime algo consistente%0A            if pencil is None:%0A                # comportamento n%C3%A3o especificado no enunciado; evitar crash\n %0A   \n@@ -3330,15 +3330,19 @@\n ain__%22:%0A\n+    \n main()%0A\n",
+            "lines": "124"
+        },
+        {
+            "label": "2025-10-25_21-46-01",
+            "content": "@@ -2879,16 +2879,42 @@\n age()%0A%0A%0A\n+if __name__ == %22__main__%22:\n %0Amain()%0A\n",
+            "lines": "122"
+        },
+        {
+            "label": "2025-10-25_21-46-05",
+            "content": "@@ -2878,15 +2878,17 @@\n Page()%0A%0A\n+%0A%0A\n main()%0A\n",
+            "lines": "122"
+        },
+        {
+            "label": "2025-10-25_21-46-10",
+            "content": "@@ -1990,16 +1990,17 @@\n ontinue%0A\n+%0A\n        %0A\n@@ -2116,24 +2116,25 @@\n print(echo)%0A\n+%0A\n         args\n@@ -2145,24 +2145,47 @@\n ine.split()%0A\n+        cmd = args%5B0%5D%0A%0A\n         %0A   \n@@ -2192,23 +2192,19 @@\n      if \n-args%5B0%5D\n+cmd\n .startsw\n@@ -2229,25 +2229,17 @@\n     \n-args%5B0%5D = args%5B0%5D\n+cmd = cmd\n %5B1:%5D\n@@ -2251,23 +2251,19 @@\n      if \n-args%5B0%5D\n+cmd\n  == %22end\n@@ -2292,31 +2292,27 @@\n        elif \n-args%5B0%5D\n+cmd\n  == %22init%22:%0A\n@@ -2394,31 +2394,27 @@\n        elif \n-args%5B0%5D\n+cmd\n  == %22show%22:%0A\n@@ -2555,31 +2555,27 @@\n        elif \n-args%5B0%5D\n+cmd\n  == %22insert%22\n@@ -2768,31 +2768,27 @@\n        elif \n-args%5B0%5D\n+cmd\n  == %22remove%22\n@@ -2830,23 +2830,19 @@\n    elif \n-args%5B0%5D\n+cmd\n  == %22wri\n",
+            "lines": "120"
+        },
+        {
+            "label": "2025-10-28_13-00-31",
+            "content": "@@ -536,16 +536,17 @@\n ize%7D%5D%22%0A%0A\n+%0A\n class Pe\n@@ -990,16 +990,17 @@\n  = lead%0A\n+%0A\n     def \n@@ -1359,16 +1359,25 @@\n heet()%0A%0A\n+        %0A\n         \n@@ -1459,32 +1459,33 @@\n          return%0A\n+%0A\n         final = \n@@ -1503,24 +1503,33 @@\n ze - gasto%0A%0A\n+        %0A\n         if f\n@@ -1626,32 +1626,40 @@\n         return%0A%0A\n+       %0A\n         self.tip\n@@ -2888,15 +2888,16 @@\n ePage()%0A\n+%0A\n main()%0A\n",
+            "lines": "116"
+        },
+        {
+            "label": "2025-10-28_13-01-07",
+            "content": "class Lead:\n    def __init__(self, thickness: float, hardness: str, size: int):\n        self.thickness = thickness\n        self.hardness = hardness\n        self.size = size\n\n    def usagePerSheet(self) -> int:\n        if self.hardness == \"HB\":\n            return 1\n        elif self.hardness == \"2B\":\n            return 2\n        elif self.hardness == \"4B\":\n            return 4\n        elif self.hardness == \"6B\":\n            return 6\n        return 0\n\n    def __str__(self):\n        return f\"[{self.thickness}:{self.hardness}:{self.size}]\"\n\nclass Pencil:\n    def __init__(self, thickness: float):\n        self.thickness = thickness\n        self.tip = None  \n\n    def hasGrafite(self) -> bool:\n        return self.tip is not None\n\n    def insert(self, lead: Lead):\n        if self.hasGrafite():\n            print(\"fail: ja existe grafite\")\n            return\n        if lead.thickness != self.thickness:\n            print(\"fail: calibre incompativel\")\n            return\n        self.tip = lead\n    def remove(self):\n        if not self.hasGrafite():\n            print(\"fail: nao existe grafite\")\n            return None\n        removed = self.tip\n        self.tip = None\n        return removed\n\n    def writePage(self):\n        if not self.hasGrafite():\n            print(\"fail: nao existe grafite\")\n            return\n\n        gasto = self.tip.usagePerSheet()\n\n        if self.tip.size <= 10:\n            print(\"fail: tamanho insuficiente\")\n            return\n        final = self.tip.size - gasto\n\n        if final < 10:\n            self.tip.size = 10\n            print(\"fail: folha incompleta\")\n            return\n\n        self.tip.size -= gasto\n\n    def __str__(self):\n        grafite = str(self.tip) if self.tip else \"null\"\n        return f\"calibre: {self.thickness}, grafite: {grafite}\"\n\n\ndef main():\n    pencil = None\n    while True:\n        try:\n            line = input()\n        except EOFError:\n            break\n        if not line:\n            continue\n       \n        if line.startswith(\"$\"):\n            echo = line\n        else:\n            echo = f\"${line}\"\n        print(echo)\n        args = line.split()\n        \n        if args[0].startswith(\"$\"):\n            args[0] = args[0][1:]\n\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"init\":\n            calibre = float(args[1])\n            pencil = Pencil(calibre)\n        elif args[0] == \"show\":\n            if pencil is None:\n                print(\"calibre: None, grafite: null\")\n            else:\n                print(pencil)\n        elif args[0] == \"insert\":\n            calibre = float(args[1])\n            dureza = args[2]\n            tamanho = int(args[3])\n            lead = Lead(calibre, dureza, tamanho)\n            pencil.insert(lead)\n        elif args[0] == \"remove\":\n            pencil.remove()\n        elif args[0] == \"write\":\n            pencil.writePage()\nmain()\n",
+            "lines": "109"
+        }
+    ]
+}
