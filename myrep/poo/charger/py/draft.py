@@ -34,7 +34,6 @@ class Notebook:
         print("ligado:", self.ligado)
         if self.bateria:
             print("bateria:", self.bateria.carga)
-        # faltou mostrar o carregador
 
 def main():
     nb = Notebook()
@@ -47,7 +46,6 @@ def main():
     nb.usar(10)
     nb.mostrar()
 
-    # ainda não fiz parte do carregador
     c = Carregador(2)
     nb.carregador = c
     nb.mostrar()
